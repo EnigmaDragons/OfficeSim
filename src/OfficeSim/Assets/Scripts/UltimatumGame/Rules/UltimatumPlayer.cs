@@ -2,7 +2,7 @@ using System.Threading;
 
 public sealed class UltimatumPlayer
 {
-    private static int NextId = 1;
+    private static int NextId = 0;
 
     public int Id { get; } = Interlocked.Increment(ref NextId);
     public UltimatumStrategy Strategy { get; }
