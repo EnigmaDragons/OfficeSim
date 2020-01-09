@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using UnityTemplateProjects.UltimatumGame;
 
 public class UltimatumRoundPairingsReady
 {

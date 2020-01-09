@@ -6,10 +6,11 @@ public class PlayerPool : MonoBehaviour
     [SerializeField] private CharacterId[] prototypes;
     [SerializeField] private Transform nowhere;
     
-    private Dictionary<int, GameObject> characters = new Dictionary<int, GameObject>();
+    private readonly Dictionary<int, GameObject> characters = new Dictionary<int, GameObject>();
 
     public void Init(int id)
     {
+        Debug.Log("New Character");
         var character = Instantiate(prototypes.Random().gameObject, nowhere.position, Quaternion.identity);
         character.SetActive(false);
         character.GetComponent<CharacterId>().Id = id;

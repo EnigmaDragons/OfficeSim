@@ -23,6 +23,6 @@ public sealed class PlayUltimatumGame : MonoBehaviour
     {
         Message.Publish(new UltimatumPlayerReady { Id = characterId.Id });
         yield return new WaitForSeconds(timeToWait);
-        walking.WalkTo(homeSpot, () => { });
+        walking.WalkTo(homeSpot, () => Message.Publish(new UltimatumPlayerFinished(characterId.Id)));
     }
 }

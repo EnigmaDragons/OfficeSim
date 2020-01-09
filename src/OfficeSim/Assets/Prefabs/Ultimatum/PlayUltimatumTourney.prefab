@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfPlayers: 2
   pool: {fileID: 6406320826102534291}
+  numberOfRounds: 5
 --- !u!1 &6406320826102534292
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityTemplateProjects.UltimatumGame;
 
 public static class UltimatumRound
 {
@@ -20,6 +19,11 @@ public static class UltimatumRound
         });
         
         var response = responder.Strategy.Response.Evaluate(proposal);
+        Message.Publish(new ProposalResponseGiven
+        {
+            Pairing = pairing,
+            Response = response
+        });
         var proposerWinnings = response ? proposerAmount : 0;
         var responderWinnings = response ? responderAmount : 0;
         

@@ -1,5 +1,4 @@
-﻿using UnityTemplateProjects.UltimatumGame;
-
+﻿
 public class ProposalPresented
 {
     public UltimatumRoundPairing Pairing { get; set; }

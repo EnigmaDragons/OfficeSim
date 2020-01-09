@@ -1,16 +1,13 @@
-namespace UnityTemplateProjects.UltimatumGame
+public sealed class UltimatumRoundPairing
 {
-    public sealed class UltimatumRoundPairing
-    {
-        public int RoomNumber { get; }
-        public UltimatumPlayer Proposer { get; }
-        public UltimatumPlayer Responder { get; }
+    public int RoomNumber { get; }
+    public UltimatumPlayer Proposer { get; }
+    public UltimatumPlayer Responder { get; }
 
-        public UltimatumRoundPairing(int room, UltimatumPlayer proposer, UltimatumPlayer responder)
-        {
-            RoomNumber = room;
-            Proposer = proposer;
-            Responder = responder;
-        }
+    public UltimatumRoundPairing(int room, UltimatumPlayer proposer, UltimatumPlayer responder)
+    {
+        RoomNumber = room;
+        Proposer = proposer;
+        Responder = responder;
     }
 }
