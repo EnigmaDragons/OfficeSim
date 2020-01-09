@@ -98,6 +98,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -355100439398595823, guid: 158f1dbf3040ca84a96eebeaa9afd44d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -355100439398595823, guid: 158f1dbf3040ca84a96eebeaa9afd44d,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6977104686344395735, guid: 158f1dbf3040ca84a96eebeaa9afd44d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
