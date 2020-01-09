@@ -1,0 +1,6 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl wood
+Kd 1 0.9559247 0.9159091
+map_Kd Textures/wood.png
+
