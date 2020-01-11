@@ -8,15 +8,15 @@ public sealed class UltimatumStaticProposalStrategy : UltimatumProposalStrategy
     public string Description()
     {
         var baseDesc = "";
-        if (SkewAmount < 51 && SkewAmount > 49)
+        if (SkewAmount < 0.51f && SkewAmount > 0.49f)
             return $"{baseDesc} Fair";
-        if (SkewAmount > 75)
+        if (SkewAmount > 0.75f)
             return $"{baseDesc} Miserly";
-        if (SkewAmount > 50)
+        if (SkewAmount > 0.50f)
             return $"{baseDesc} Stingy";
-        if (SkewAmount < 25)
+        if (SkewAmount < 0.25f)
             return $"{baseDesc} Saintly";
-        if (SkewAmount < 50)
+        if (SkewAmount < 0.50f)
             return $"{baseDesc} Generous";
         return $"{baseDesc} Unknown";
     }

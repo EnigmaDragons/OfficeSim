@@ -8,9 +8,9 @@ public sealed class UltimatumStaticResponderStrategy : UltimatumResponseStrategy
     public string Description()
     {
         var baseDesc = "";
-        if (SkewTolerance > 90)
+        if (SkewTolerance > 0.90f)
             return $"{baseDesc} Permissive";
-        if (SkewTolerance > 50)
+        if (SkewTolerance > 0.50f)
             return $"{baseDesc} Tolerant";
         return "Defensive";
     }

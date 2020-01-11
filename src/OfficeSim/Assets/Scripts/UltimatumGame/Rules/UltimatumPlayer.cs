@@ -1,6 +1,4 @@
 
-using UnityEngine;
-
 public sealed class UltimatumPlayer
 {
     public int Id { get; }
@@ -10,7 +8,6 @@ public sealed class UltimatumPlayer
 
     public UltimatumPlayer(int id, UltimatumStrategy strategy)
     {
-        Debug.Log($"Player {id}");
         Strategy = strategy;
         Id = id;
     }
