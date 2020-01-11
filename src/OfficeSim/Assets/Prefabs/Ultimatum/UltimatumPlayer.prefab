@@ -1185,6 +1185,7 @@ GameObject:
   - component: {fileID: 3613957827383531967}
   - component: {fileID: 4354882887680414988}
   - component: {fileID: 3267038475492041325}
+  - component: {fileID: 872083912184194926}
   m_Layer: 0
   m_Name: UltimatumPlayer
   m_TagString: Untagged
@@ -1351,6 +1352,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 557130493775025487}
   descriptor: Name
+--- !u!114 &872083912184194926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426604697463683454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885e38ce75d044f7b2bc0e8188415897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 2039443509594187884}
 --- !u!1 &4426606992042186178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,6 +2474,18 @@ Transform:
 --- !u!114 &557130493775025487 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5745485042404765864, guid: 0a539506026fa2541a99cbd1b2fc8420,
+    type: 3}
+  m_PrefabInstance: {fileID: 5190190831300290023}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2039443509594187884 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6073891480860282251, guid: 0a539506026fa2541a99cbd1b2fc8420,
     type: 3}
   m_PrefabInstance: {fileID: 5190190831300290023}
   m_PrefabAsset: {fileID: 0}

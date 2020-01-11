@@ -1,3 +1,4 @@
+using UltimatumGame.Events;
 using UnityEngine;
 
 public static class UltimatumRound
@@ -29,5 +30,12 @@ public static class UltimatumRound
         
         proposer.State.MarkGameComplete(proposerWinnings);
         responder.State.MarkGameComplete(responderWinnings);
+        Message.Publish(new UltimatumRoundPairingResult
+        {
+            Pairing = pairing,
+            ProposerAmount = proposerAmount,
+            ResponderAmount = responderAmount,
+            WasAccepted = response
+        });
     }
 }

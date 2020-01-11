@@ -19,6 +19,7 @@ public class PlayTournament : OnMessage<UltimatumPlayerReady, UltimatumPlayerFin
         _tourney.Group.Players.ForEach(p => pool.Init(p.Id));
         _readyPlayers = new HashSet<int>();
         _finishedPlayers = new HashSet<int>();
+        Debug.Log("Tournament Setup");
         _tourney.PrepareRound();
     }
 

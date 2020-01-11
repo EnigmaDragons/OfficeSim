@@ -5,7 +5,7 @@ public sealed class UltimatumGroup
 {
     public IEnumerable<UltimatumPlayer> Players { get; } 
 
-    public UltimatumGroup(IEnumerable<UltimatumPlayer> players)
+    public UltimatumGroup(List<UltimatumPlayer> players)
     {
         Players = players;
     }
