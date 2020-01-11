@@ -33,8 +33,11 @@ public class PlayTournament : OnMessage<UltimatumPlayerReady, UltimatumPlayerFin
 
         if (_finishedPlayers.Count == _tourney.Group.Players.Count())
         {
-            _tourney.PrepareRound();
             _finishedPlayers.Clear();
+            if (_currentRound < numberOfRounds)
+                _tourney.PrepareRound();
+            else
+                Message.Publish(new UltimatumTournamentFinished(_tourney));
         }
     }
 

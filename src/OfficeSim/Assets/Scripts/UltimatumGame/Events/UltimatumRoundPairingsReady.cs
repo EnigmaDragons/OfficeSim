@@ -2,10 +2,12 @@
 
 public class UltimatumRoundPairingsReady
 {
+    public int RoundNumber { get; }
     public List<UltimatumRoundPairing> Pairings { get; }
 
-    public UltimatumRoundPairingsReady(List<UltimatumRoundPairing> pairings)
+    public UltimatumRoundPairingsReady(int roundNumber, List<UltimatumRoundPairing> pairings)
     {
+        RoundNumber = roundNumber;
         Pairings = pairings;
     }
 }
