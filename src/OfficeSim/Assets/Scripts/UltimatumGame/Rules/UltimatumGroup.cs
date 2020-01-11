@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 public sealed class UltimatumGroup
 {
@@ -8,4 +9,7 @@ public sealed class UltimatumGroup
     {
         Players = players;
     }
+
+    public UltimatumPlayer[] Standings 
+        => Players.OrderBy(p => p.State.Winnings).ToArray();
 }

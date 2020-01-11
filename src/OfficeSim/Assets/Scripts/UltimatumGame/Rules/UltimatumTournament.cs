@@ -12,7 +12,7 @@ public sealed class UltimatumTournament
     public static UltimatumTournament CreateGroup(int numPlayers) =>
         new UltimatumTournament(
             new UltimatumGroup(Enumerable.Range(0, numPlayers)
-                .Select(x => new UltimatumPlayer(UltimateStrategyGeneration.Generate()))));
+                .Select(id => new UltimatumPlayer(id, UltimateStrategyGeneration.Generate()))));
 
     public void PlayRounds(int numRounds) 
         => Enumerable.Range(0, numRounds).ForEach(_ => PlayRound());

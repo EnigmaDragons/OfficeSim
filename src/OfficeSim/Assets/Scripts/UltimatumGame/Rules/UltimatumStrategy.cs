@@ -11,4 +11,6 @@ public sealed class UltimatumStrategy
         Proposal = proposal;
         Response = response;
     }
+
+    public string Description => $"{Proposal.Description()} {Response.Description()}";
 }

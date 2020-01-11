@@ -10,10 +10,10 @@ public class PlayerPool : MonoBehaviour
 
     public void Init(int id)
     {
-        Debug.Log("New Character");
         var character = Instantiate(prototypes.Random().gameObject, nowhere.position, Quaternion.identity);
         character.SetActive(false);
         character.GetComponent<CharacterId>().Id = id;
+        character.GetComponent<CharacterDescriptors>().Set("Name", NameData.MaleNames.Random());
         characters[id] = character;
     }
     
