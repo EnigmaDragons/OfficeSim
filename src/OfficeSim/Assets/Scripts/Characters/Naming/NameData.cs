@@ -2,6 +2,8 @@ using System.Collections.Generic;
 
 public static class NameData
 {
+    public static string Any(CharacterSex sex) => sex == CharacterSex.Female ? FemaleNames.Random() : MaleNames.Random();
+    
     public static readonly List<string> FemaleNames = new List<string>
     {
         "Adena",
