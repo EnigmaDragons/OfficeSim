@@ -9,4 +9,5 @@ public sealed class CurrentUltimatumTournament : ScriptableObject
     public void Init(UltimatumTournament tourney) => _tourney = tourney;
 
     public UltimatumPlayer Player(int id) => _tourney.Group.Players.Single(p => p.Id == id);
+    public UltimatumGroup Group => _tourney.Group;
 }

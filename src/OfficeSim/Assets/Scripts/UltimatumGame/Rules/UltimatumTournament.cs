@@ -27,6 +27,7 @@ public sealed class UltimatumTournament
         
         CurrentRoundPairings.ForEach(UltimatumRound.Play);
         CurrentRoundPairings = null;
+        Message.Publish(new UltimatumRoundFinished(_roundNumber));
     }
 
     public void PrepareRound()
