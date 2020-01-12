@@ -7,7 +7,7 @@ public sealed class UltimatumStaticProposalStrategy : UltimatumProposalStrategy
 
     public string Description()
     {
-        var baseDesc = "";
+        var baseDesc = $"";
         if (SkewAmount < 0.51f && SkewAmount > 0.49f)
             return $"{baseDesc} Fair";
         if (SkewAmount > 0.75f)
