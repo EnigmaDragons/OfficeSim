@@ -337,7 +337,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   display: {fileID: 6108487818478211852}
-  duration: 1.5
+  duration:
+    UseConstant: 0
+    ConstantValue: 1.5
+    FloatVariable: {fileID: 11400000, guid: e2bbd2333cccb18409e5ba62cc1c5276, type: 2}
+  delayBeforeColorChange:
+    UseConstant: 0
+    ConstantValue: 2
+    FloatVariable: {fileID: 11400000, guid: aef658dd09e77404582234d6e26c183a, type: 2}
+  acceptedColor:
+    UseConstant: 0
+    ConstantValue: {r: 1, g: 0, b: 1, a: 1}
+    Variable: {fileID: 11400000, guid: 47e40b6468f0c264389519a3813a991f, type: 2}
+  rejectedColor:
+    UseConstant: 0
+    ConstantValue: {r: 1, g: 0, b: 1, a: 1}
+    Variable: {fileID: 11400000, guid: 50d927d6f84a97443b632c639107afd0, type: 2}
   role: 1
   roomNumber: 0
 --- !u!114 &1804012421031716057
@@ -353,7 +368,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   display: {fileID: 6108487819128253060}
-  duration: 3
+  duration:
+    UseConstant: 0
+    ConstantValue: 1.5
+    FloatVariable: {fileID: 11400000, guid: e2bbd2333cccb18409e5ba62cc1c5276, type: 2}
+  delayBeforeColorChange:
+    UseConstant: 0
+    ConstantValue: 2
+    FloatVariable: {fileID: 11400000, guid: aef658dd09e77404582234d6e26c183a, type: 2}
+  acceptedColor:
+    UseConstant: 0
+    ConstantValue: {r: 1, g: 0, b: 1, a: 1}
+    Variable: {fileID: 11400000, guid: 47e40b6468f0c264389519a3813a991f, type: 2}
+  rejectedColor:
+    UseConstant: 0
+    ConstantValue: {r: 1, g: 0, b: 1, a: 1}
+    Variable: {fileID: 11400000, guid: 50d927d6f84a97443b632c639107afd0, type: 2}
   role: 2
   roomNumber: 0
 --- !u!114 &6233547987452430640
@@ -371,8 +401,14 @@ MonoBehaviour:
   roomNumber: 0
   accept: {fileID: 8403749472471041334}
   reject: {fileID: 5076990383325552092}
-  delay: 1.5
-  displayDuration: 1.5
+  delay:
+    UseConstant: 0
+    ConstantValue: 1.5
+    FloatVariable: {fileID: 11400000, guid: aef658dd09e77404582234d6e26c183a, type: 2}
+  displayDuration:
+    UseConstant: 0
+    ConstantValue: 2
+    FloatVariable: {fileID: 11400000, guid: 537dd2dd2251231488812d70dcd85412, type: 2}
 --- !u!1 &6108487819128253062
 GameObject:
   m_ObjectHideFlags: 0

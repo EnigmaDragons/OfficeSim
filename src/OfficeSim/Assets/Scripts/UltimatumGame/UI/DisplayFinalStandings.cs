@@ -8,7 +8,7 @@ using UnityEngine;
 public sealed class DisplayFinalStandings : OnMessage<UltimatumTournamentFinished>
 {
     [SerializeField] private TextMeshProUGUI display;
-    [SerializeField] private float delay = 1.0f;
+    [SerializeField] private FloatReference delay = new FloatReference(1.0f);
 
     private void Awake() => display.text = "";
     

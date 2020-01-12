@@ -6,8 +6,8 @@ public sealed class DisplayUltimatumResponse : OnMessage<ProposalResponseGiven>
     [SerializeField] private int roomNumber;
     [SerializeField] private GameObject accept;
     [SerializeField] private GameObject reject;
-    [SerializeField] private float delay = 1.5f;
-    [SerializeField] private float displayDuration = 2f;
+    [SerializeField] private FloatReference delay = new FloatReference(1.5f);
+    [SerializeField] private FloatReference displayDuration =  new FloatReference(2f);
 
     private void Awake() => Hide();
     

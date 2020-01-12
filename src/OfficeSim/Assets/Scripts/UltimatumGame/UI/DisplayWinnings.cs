@@ -7,7 +7,7 @@ using UnityEngine;
 public sealed class DisplayWinnings : OnMessage<UltimatumRoundPairingResult>
 {
     [SerializeField] private TextMeshPro display;
-    [SerializeField] private float delay = 1.5f;
+    [SerializeField] private FloatReference delay = new FloatReference(1.5f);
     [SerializeField] private CurrentUltimatumTournament state;
     
     private int _characterId;
