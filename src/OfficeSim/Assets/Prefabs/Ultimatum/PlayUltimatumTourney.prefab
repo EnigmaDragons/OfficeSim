@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a340e127ce5a4391b1e5d49cd463d711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfPlayers: 2
+  numberOfPlayers: 128
   pool: {fileID: 6406320826102534291}
-  numberOfRounds: 6
+  numberOfRounds: 64
+  current: {fileID: 11400000, guid: 962289f0cf5e1d74c94d5453c8e48393, type: 2}
 --- !u!1 &6406320826102534292
 GameObject:
   m_ObjectHideFlags: 0

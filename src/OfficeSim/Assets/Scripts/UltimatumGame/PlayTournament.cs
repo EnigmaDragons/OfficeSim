@@ -8,6 +8,7 @@ public class PlayTournament : OnMessage<UltimatumPlayerReady, UltimatumPlayerFin
     [SerializeField] private int numberOfPlayers;
     [SerializeField] private PlayerPool pool;
     [SerializeField] private int numberOfRounds;
+    [SerializeField] private CurrentUltimatumTournament current;
 
     private UltimatumTournament _tourney;
     private HashSet<int> _rooms;
@@ -24,6 +25,7 @@ public class PlayTournament : OnMessage<UltimatumPlayerReady, UltimatumPlayerFin
         _rooms = new HashSet<int>();
         _readyPlayers = new HashSet<int>();
         _finishedPlayers = new HashSet<int>();
+        current.Init(_tourney);
         Debug.Log("Tournament Setup");
     }
 
