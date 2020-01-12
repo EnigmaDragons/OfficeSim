@@ -11,5 +11,5 @@ public sealed class UltimatumGroup
     }
 
     public UltimatumPlayer[] Standings 
-        => Players.OrderBy(p => p.State.Winnings).ToArray();
+        => Players.OrderByDescending(p => p.State.Winnings).ToArray();
 }

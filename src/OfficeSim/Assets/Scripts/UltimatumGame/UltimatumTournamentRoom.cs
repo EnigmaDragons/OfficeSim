@@ -8,7 +8,9 @@ public class UltimatumTournamentRoom : OnMessage<UltimatumRoundPairingsReady>
     [SerializeField] private Transform proposerPlay;
     [SerializeField] private Transform responderPlay;
     [SerializeField] private PlayerPool pool;
-    
+
+    private void Start() => Message.Publish(new UltimatumRoomSetup(roomNumber));
+
     protected override void Execute(UltimatumRoundPairingsReady msg)
     {
         var pairing = msg.Pairings.Find(r => r.RoomNumber == roomNumber);
