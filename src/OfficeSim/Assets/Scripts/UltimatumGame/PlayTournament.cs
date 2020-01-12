@@ -20,7 +20,7 @@ public class PlayTournament : OnMessage<UltimatumPlayerReady, UltimatumPlayerFin
     void Start()
     {
         _tourney = UltimatumTournament.CreateGroup(numberOfPlayers);
-        _tourney.Group.Players.ForEach(p => pool.Init(p.Id));
+        _tourney.Group.Players.ForEach(p => pool.Init(p.Id, p.Name));
         _rooms = new HashSet<int>();
         _readyPlayers = new HashSet<int>();
         _finishedPlayers = new HashSet<int>();

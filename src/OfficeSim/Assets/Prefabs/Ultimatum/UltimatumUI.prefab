@@ -338,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 6108487818478211852}
   duration: 1.5
-  role: 0
+  role: 1
   roomNumber: 0
 --- !u!114 &1804012421031716057
 MonoBehaviour:
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 6108487819128253060}
   duration: 3
-  role: 1
+  role: 2
   roomNumber: 0
 --- !u!114 &6233547987452430640
 MonoBehaviour:
@@ -371,6 +371,7 @@ MonoBehaviour:
   roomNumber: 0
   accept: {fileID: 8403749472471041334}
   reject: {fileID: 5076990383325552092}
+  delay: 1.5
   displayDuration: 1.5
 --- !u!1 &6108487819128253062
 GameObject:

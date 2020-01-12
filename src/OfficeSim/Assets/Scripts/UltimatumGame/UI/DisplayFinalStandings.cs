@@ -18,7 +18,7 @@ public sealed class DisplayFinalStandings : OnMessage<UltimatumTournamentFinishe
         sb.AppendLine("Final Results");
         sb.AppendLine("-----------------------------------");
         msg.Group.Standings.Take(5)
-            .ForEach(p => sb.AppendLine($"{p.Id} - ${p.State.Winnings} - {p.Strategy.Description}"));
+            .ForEach(p => sb.AppendLine($"{p.Name} - ${p.State.Winnings} - {p.Strategy.Description}"));
         StartCoroutine(DisplayAfterDelay(sb.ToString()));
     }
 

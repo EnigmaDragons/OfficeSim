@@ -21,5 +21,5 @@ public sealed class UltimatumStaticProposalStrategy : UltimatumProposalStrategy
         return $"{baseDesc} Unknown";
     }
 
-    public float ProposeSplit() => SkewAmount;
+    public UltimatumOffer ProposeSplit(UltimatumPlayerState responder) => new UltimatumOffer(SkewAmount);
 }

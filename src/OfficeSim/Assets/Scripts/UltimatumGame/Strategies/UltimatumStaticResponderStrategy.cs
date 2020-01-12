@@ -15,5 +15,5 @@ public sealed class UltimatumStaticResponderStrategy : UltimatumResponseStrategy
         return "Defensive";
     }
 
-    public bool Evaluate(float split) => 1-(SkewTolerance) >= split;
+    public bool Evaluate(UltimatumPlayerState proposer, UltimatumOffer split) => 1-(SkewTolerance) >= split.ProposerRatio;
 }
