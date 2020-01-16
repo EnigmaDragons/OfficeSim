@@ -19,6 +19,7 @@ public static class Rng
     public static KeyValuePair<T, T2> Random<T, T2>(this Dictionary<T, T2> dictionary) => dictionary.ElementAt(Int(dictionary.Count));
     public static T Random<T>(this T[] array) => array[Int(array.Length)];
     public static T Random<T>(this List<T> list) => list[Int(list.Count)];
+    public static List<T> Weighted<T>(this List<Weighted<T>> items) => items.SelectMany(i => Enumerable.Range(0, i.Weight).Select(_ => i.Item)).ToList();
 
     public static T[] Shuffled<T>(this T[] arr)
     {
