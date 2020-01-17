@@ -51,8 +51,14 @@ public class PlayTournament : OnMessage<UltimatumPlayerReady, UltimatumPlayerFin
             if (_currentRound < numberOfRounds)
                 _tourney.PrepareRound();
             else
-                Message.Publish(new UltimatumTournamentFinished(_tourney));
+                CompleteTournament();
         }
+    }
+
+    private void CompleteTournament()
+    {
+        _tourney.CompleteTournament();
+        Message.Publish(new UltimatumTournamentFinished(_tourney));
     }
 
     protected override void Execute(UltimatumPlayerReady msg) => _readyPlayers.Add(msg.Id);

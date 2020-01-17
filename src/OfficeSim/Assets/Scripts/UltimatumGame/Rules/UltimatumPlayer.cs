@@ -1,4 +1,6 @@
 
+using UltimatumGame.Rules;
+
 public sealed class UltimatumPlayer
 {
     public int Id { get; }
@@ -7,6 +9,7 @@ public sealed class UltimatumPlayer
 
     public UltimatumStrategy Strategy { get; }
     public UltimatumPlayerState State { get; }
+    public UltimatumTournamentStats TournamentStats { get; }
 
     public UltimatumPlayer(int id, BasicCharacterTraits character, UltimatumStrategy strategy)
     {

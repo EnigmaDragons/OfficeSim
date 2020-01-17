@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using UltimatumGame.Rules;
 
 public sealed class UltimatumTournament
 {
@@ -8,15 +9,23 @@ public sealed class UltimatumTournament
     public UltimatumGroup Group { get; }
     public List<UltimatumRoundPairing> CurrentRoundPairings { get; private set; }
 
-    private UltimatumTournament(UltimatumGroup g) 
+    public UltimatumTournament(UltimatumGroup g) 
         => Group = g;
 
     public static UltimatumTournament CreateGroup(int numPlayers) =>
         new UltimatumTournament(
             new UltimatumGroup(Enumerable.Range(0, numPlayers)
-                .Select(id => new UltimatumPlayer(id, BasicCharacterTraits.Random(), UltimateStrategyGeneration.Generate()))
+                .Select(id => new UltimatumPlayer(id, BasicCharacterTraits.Random(), UltimatumStrategyGeneration.Generate()))
                 .ToList()));
 
+    public void CompleteTournament()
+    {
+        var standings = Group.Standings;
+        for (var i = 0; i < standings.Length; i++)
+            standings[i].TournamentStats.Placings.Add(
+                new TournamentPlacing { NumberOfParticipants = standings.Length, Place = i + 1 });;
+    }
+    
     public void PlayRounds(int numRounds) 
         => Enumerable.Range(0, numRounds).ForEach(_ => PlayRound());
 
