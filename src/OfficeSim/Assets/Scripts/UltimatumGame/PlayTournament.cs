@@ -17,14 +17,19 @@ public class PlayTournament : OnMessage<UltimatumPlayerReady, UltimatumPlayerFin
     private int NumPlayersExpected;
     private int _currentRound = 0;
     private bool _started;
-    
-    void Start()
+
+    void Awake()
     {
-        _tourney = UltimatumTournament.CreateGroup(numberOfPlayers);
-        _tourney.Group.Players.ForEach(p => pool.Init(p.Id, p.Character));
         _rooms = new HashSet<int>();
         _readyPlayers = new HashSet<int>();
         _finishedPlayers = new HashSet<int>();
+        _tourney = UltimatumTournament.CreateGroup(numberOfPlayers);
+    }
+    
+    void Start()
+    {
+        Debug.Log("Started Tournament Setup");
+        _tourney.Group.Players.ForEach(p => pool.Init(p.Id, p.Character));
         current.Init(_tourney);
         Debug.Log("Tournament Setup");
     }
@@ -65,6 +70,8 @@ public class PlayTournament : OnMessage<UltimatumPlayerReady, UltimatumPlayerFin
     protected override void Execute(UltimatumPlayerFinished msg) => _finishedPlayers.Add(msg.Id);
     protected override void Execute(UltimatumRoomSetup msg)
     {
+        if (_rooms == null)
+            throw new Exception("Room Setup is occurring before Tournament is Setup");
         _rooms.Add(msg.RoomNumber);
         UpdateNumPlayersExpected();
     }
